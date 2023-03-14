@@ -46,7 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
- 
+
+ /*------------------------
+ ---------- My CSS --------
+ -------------------------*/
  body{
     color: #9597A5;
     font-family: 'Public Sans', sans-serif;
@@ -58,40 +61,54 @@ table {
  header{
     display: grid;
     grid-template-rows: repeat(5, auto);
+    position: relative;
  }
 #logo{
     grid-row: 1/2;
     grid-column: 1/-1;
+    align-self: center;
 }
 #hamburger{
     grid-row: 1/2;
     grid-column: 1/-1;
     justify-self: end;
-    margin-top: 10px;
-    margin-right: 6px;
-    z-index: 200;
+    margin-right: 20px; 
+    cursor: pointer;
+    align-self: center;
 }
 
-
  [type="checkbox"]{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 64px;
     grid-row: 1/2;
     grid-column: 1/-1;
     justify-self: end;
-    /* opacity: 0; */
+    opacity: 0;
     cursor: pointer;
-   
-
+    margin-right: 10px;
+    z-index: 200;
  }
+
 h1{
     grid-row: 3/4;
+    grid-column: 1/-1;
     font-size: 40px;
+    margin-bottom: 18px;
 }
 #hero{
     grid-row: 2/3;
     grid-column: 1/-1;
+    clip-path: inset(40px 0 0 0);
+    margin-top: -40px;
 }
+/* #heroTint{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.05);
+} */
+
 header button{
     grid-row: 6/-1;
     justify-self: center;
@@ -101,32 +118,48 @@ header p{
 }
 #checkbox:checked ~ nav{
     transform: translateY(0%);
-    max-height: 265px;
-    
+    max-height: 290px;
+    background-color: #fff;
+    margin-top: 24px;  
 }
+#checkbox:checked ~ #heroTint{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 60px;
+    width: 375px;
+    height: 45vh;
+    background-image: linear-gradient(rgb(45,49,77), rgba(45,50,77,0.1));
+    z-index: 400;
+}
+
 #checkbox:checked ~ nav a{
     visibility: visible;
-
 }
+
  h1, h2, h3, h4{
     color: #2D314D;
     font-weight: 300;
     text-align: center;
  }
+ section h2{
+    font-size: 32px;
+    margin-bottom: 14px;
+    letter-spacing: -0.57px;
+    padding: 0 40px;
+ }
  p{
     line-height: 25px;
     letter-spacing: -0.23px;  
+    font-size: 15px;
  }
  nav{
-    background-color: #fff;
     width: 85%;
-    margin: 0 auto;
-    padding: 15px 0;
-    border: .25px solid lime;
     grid-row: 2/3; 
     grid-column: 1/-1;  
-    height: 265px;
-    visibility: hidden;
+    z-index: 400;
+    border-radius: 4px;
+    margin: 0 auto;
  }
 
  nav ul{
@@ -139,26 +172,57 @@ header p{
     margin: 0;
     padding: 0;
  }
- ul a{
+
+ 
+ nav ul a{
+    font-size: 18px;
     text-decoration: none;
     display: block;
     padding: 12px 0;
     color: #2D314D;
-    background-color: #fff;
+ }
+
+ ul > li{
+    margin: 10px;
  }
  img{
     max-width: 100%;
     vertical-align: bottom;
+ }
+ #phoneMockup {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    z-index: 100;
+    margin-top: -135px;
+    clip-path: inset(135px 0 0 0);
+    
+ }
+
+ main p{
+    margin-bottom: 30px;
+ }
+ button{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 34px;
+    background-image: linear-gradient(to right, #33D35E, #2AB6D9);
+    color: #fff;
+    font-weight: 700;
+    height: 44px;
+    border: none;
+    margin-bottom: 88px;
+    border-radius: 50px;
+
  }
  figure{
     margin: 0;
     padding: 0;
  }
  .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
+    font-size: 11px;
+    text-align: center;
+}
 
  .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
+    color: hsl(228, 45%, 44%);
+}

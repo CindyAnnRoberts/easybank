@@ -52,11 +52,13 @@ table {
  -------------------------*/
  body{
     color: #9597A5;
+    background-color: #F2F2F2;
     font-family: 'Public Sans', sans-serif;
  }
  .wrapper{
-    width: 375px;
+    max-width: 375px;
     margin: 0 auto;
+    background-color: #FAFAFA;
  }
  header{
     display: grid;
@@ -67,12 +69,13 @@ table {
     grid-row: 1/2;
     grid-column: 1/-1;
     align-self: center;
+    margin-left: 24px;
 }
 #hamburger{
     grid-row: 1/2;
     grid-column: 1/-1;
     justify-self: end;
-    margin-right: 20px; 
+    margin-right: 24px; 
     cursor: pointer;
     align-self: center;
 }
@@ -146,6 +149,7 @@ header p{
     letter-spacing: -0.23px;  
     font-size: 15px;
     margin: 0 24px;
+    font-size: 13px;
  }
  nav{
     width: 85%;
@@ -181,6 +185,8 @@ header p{
  }
  img{
     max-width: 100%;
+    height: auto;
+    object-fit: contain;
     vertical-align: bottom;
  }
  #phoneMockup {
@@ -192,7 +198,8 @@ header p{
  }
 
  main p{
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 35ch;
  }
  button{
     display: block;
@@ -211,6 +218,11 @@ header p{
     padding-top: 64px;
     margin-bottom: 88px;
  }
+ #secondaryContent p{
+    max-width: 36ch;
+    text-align: center;
+    margin: 0 auto;
+ }s
  #secondaryContent section:first-of-type{
     padding-top: 24px;
  }
@@ -226,28 +238,47 @@ header p{
     margin-top: 32px;
     margin-bottom: 24px;
  }
- section p{
-    text-align: center;
- }
  article h2{
     font-size: 32px;
     letter-spacing: -0.57px;    
     margin-bottom: 31px;
  }
-
-
   article h4{
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.29px;
-    margin-bottom: 8px;
+    margin: 0 0 8px 30px;
+    max-width: 28ch;
+    text-align: left;
  }
- article p{
+
+ article section{
+    width: 327px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 24px;
+ }
+ article section p{
     margin-bottom: 8px;
+    padding: 0 0 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+ }
+ article section{
+    padding-bottom: 24px;
+    /* border: 1px solid lime; */
+ }
+ article section:last-of-type{
+    padding-bottom: 24px;
+    margin-bottom: 88px;
  }
  figure{
-    margin: 0 24px;
+    margin: 0;
     padding: 0;
+ }
+ figure img{
+    border-radius: 5px 5px 0 0;
  }
  figcaption{
     padding:25px 0 8px;
@@ -255,6 +286,9 @@ header p{
     font-style: italic;
     letter-spacing: -0.16px;
     margin-left: 31px;
+ }
+ footer{
+    background-color: #2D314D;
  }
 
  .attribution {

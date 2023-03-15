@@ -243,6 +243,9 @@ header p{
     letter-spacing: -0.57px;    
     margin-bottom: 31px;
  }
+ article section img{
+    box-shadow: 0 4px 4px 0;
+ }
   article h4{
     font-size: 16px;
     line-height: 20px;
@@ -302,6 +305,9 @@ header p{
     display: inline-block;
     padding: 8px;
  }
+ footer{
+    margin-bottom: 8px;
+ }
  footer li{
     padding:4px;
  }
@@ -310,8 +316,13 @@ header p{
  }
  footer button{
     border: 1px solid pink;
+    margin-bottom: 32px;
  }
-
+footer p {
+    font-size: 15px;
+    letter-spacing: -0.23px;
+    padding-bottom: 40px;
+}
 
  .attribution {
     font-size: 11px;

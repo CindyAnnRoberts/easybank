@@ -289,7 +289,29 @@ header p{
  }
  footer{
     background-color: #2D314D;
+    text-align: center;
  }
+ #footerLogo{
+    padding: 40px 0 32.3px;
+ }
+
+ #socialMedia{
+    margin-bottom: 32px;
+ }
+ #socialMedia a{
+    display: inline-block;
+    padding: 8px;
+ }
+ footer li{
+    padding:4px;
+ }
+ footer li:last-child{
+    margin-bottom: 32px;
+ }
+ footer button{
+    border: 1px solid pink;
+ }
+
 
  .attribution {
     font-size: 11px;
